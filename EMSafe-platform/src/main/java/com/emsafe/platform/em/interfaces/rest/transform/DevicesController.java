@@ -48,7 +48,7 @@ public class DevicesController {
     public ResponseEntity<Map<String, Object>> CreateDevice(@RequestBody Device device) {
         Map<String, Object> exit = new HashMap<>();
         try {
-            // ⚠️ Ya no pongas device.setId(0L); Hibernate lo interpretará como update
+
             Device savedDevice = deviceService.SaveOrUpdateDevice(device);
 
             if (savedDevice == null) {
