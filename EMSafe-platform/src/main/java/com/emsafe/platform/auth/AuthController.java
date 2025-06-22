@@ -8,7 +8,7 @@ import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping(value = "/api/v1/auth", produces = APPLICATION_JSON_VALUE) // Alinear con SecurityConfig
-@CrossOrigin(origins = "") //PENDIENTE
+@CrossOrigin(origins = "https://emsafe.netlify.app")
 @RequiredArgsConstructor
 public class AuthController {
     private final AuthService authService;
