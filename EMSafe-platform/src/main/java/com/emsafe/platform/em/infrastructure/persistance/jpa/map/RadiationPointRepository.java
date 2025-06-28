@@ -12,3 +12,4 @@ public interface RadiationPointRepository extends JpaRepository<RadiationPoint, 
     List<RadiationPoint> findByDeviceId(Long deviceId);
     List<RadiationPoint> findByLevel(String level);
 }
+
