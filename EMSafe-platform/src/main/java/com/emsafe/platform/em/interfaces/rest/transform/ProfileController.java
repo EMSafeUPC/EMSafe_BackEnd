@@ -1,7 +1,7 @@
 package com.emsafe.platform.em.interfaces.rest.transform;
 
-import com.emsafe.platform.em.application.profileimpl.dto.*;
-import com.emsafe.platform.em.application.profileimpl.services.ProfileApplicationService;
+import com.emsafe.platform.em.domain.model.aggregates.profile.dto.*;
+import com.emsafe.platform.em.application.profileimpl.ProfileApplicationService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

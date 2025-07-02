@@ -1,4 +1,4 @@
-package com.emsafe.platform.em.application.profileimpl.dto;
+package com.emsafe.platform.em.domain.model.aggregates.profile.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;

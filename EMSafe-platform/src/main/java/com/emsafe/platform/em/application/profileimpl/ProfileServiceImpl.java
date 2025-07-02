@@ -1,4 +1,4 @@
-package com.emsafe.platform.em.application.profileimpl.services;
+package com.emsafe.platform.em.application.profileimpl;
 
 import com.emsafe.platform.auth.user.User;
 import com.emsafe.platform.em.domain.services.profile.ProfileService;

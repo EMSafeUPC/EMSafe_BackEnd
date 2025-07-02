@@ -1,8 +1,8 @@
-package com.emsafe.platform.em.application.profileimpl.services;
+package com.emsafe.platform.em.application.profileimpl;
 
 import com.emsafe.platform.auth.user.User;
 import com.emsafe.platform.auth.user.UserRepository;
-import com.emsafe.platform.em.application.profileimpl.dto.*;
+import com.emsafe.platform.em.domain.model.aggregates.profile.dto.*;
 import com.emsafe.platform.em.domain.services.profile.ProfileService;
 import org.springframework.stereotype.Service;
 
