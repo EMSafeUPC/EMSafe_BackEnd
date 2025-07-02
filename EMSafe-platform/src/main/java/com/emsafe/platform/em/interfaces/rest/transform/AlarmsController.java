@@ -17,7 +17,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1/alarms", produces = "application/json")
-@CrossOrigin(origins = "https://emsafe.netlify.app")
+@CrossOrigin(
+        origins = { "https://emsafe.netlify.app", "http://localhost:4200" },
+        allowedHeaders = "*",
+        methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
+                RequestMethod.DELETE, RequestMethod.OPTIONS }
+)
 @Tag(name = "Alarm", description = "Endpoints de Alarmas")
 public class AlarmsController {
 

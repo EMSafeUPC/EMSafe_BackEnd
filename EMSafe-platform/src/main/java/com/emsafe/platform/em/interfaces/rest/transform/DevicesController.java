@@ -19,7 +19,12 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping(value = "/api/v1/devices", produces = APPLICATION_JSON_VALUE)
-@CrossOrigin(origins = "https://emsafe.netlify.app")
+@CrossOrigin(
+        origins = { "https://emsafe.netlify.app", "http://localhost:4200" },
+        allowedHeaders = "*",
+        methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
+                RequestMethod.DELETE, RequestMethod.OPTIONS }
+)
 @Tag(name = "Device", description = "Available Device Endpoints")
 public class DevicesController {
 
