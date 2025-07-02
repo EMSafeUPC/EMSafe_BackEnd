@@ -8,10 +8,7 @@ import com.emsafe.platform.em.domain.services.devices.StatusService;
 import com.emsafe.platform.em.domain.services.devices.TypeService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,7 +16,12 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping(value = "/api/v1/device-catalogs", produces = APPLICATION_JSON_VALUE)
-@CrossOrigin(origins = "https://emsafe.netlify.app")
+@CrossOrigin(
+        origins = { "https://emsafe.netlify.app", "http://localhost:4200" },
+        allowedHeaders = "*",
+        methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
+                RequestMethod.DELETE, RequestMethod.OPTIONS }
+)
 @Tag(name = "Device Catalogs", description = "Static lists for device types, statuses and frequencies")
 public class DeviceCatalogController {
 
