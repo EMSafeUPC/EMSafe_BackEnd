@@ -10,12 +10,9 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins(
-                        "http://localhost:4200",               // Para desarrollo local
-                        "https://emsafe-bcdfd.web.app"         // Para frontend en Firebase
-                )
+                .allowedOriginPatterns("*")                   // Acepta cualquier origen
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
-                .allowCredentials(true);
+                .allowCredentials(false);                      // Cuidado: no se recomienda con "*"
     }
 }
