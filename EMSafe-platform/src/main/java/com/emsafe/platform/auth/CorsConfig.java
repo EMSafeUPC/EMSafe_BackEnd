@@ -10,9 +10,9 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOriginPatterns("*")                   // Acepta cualquier origen
+                .allowedOrigins("https://emsafe-bcdfd.web.app", "https://localhost:4200")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
-                .allowCredentials(false);                      // Cuidado: no se recomienda con "*"
+                .allowCredentials(true);
     }
 }
