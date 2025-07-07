@@ -16,7 +16,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping(value = "/api/v1/map", produces = APPLICATION_JSON_VALUE)
-@CrossOrigin(origins = {"https://emsafe.netlify.app", "http://localhost:4200"})
+@CrossOrigin(origins = "*")
 @Tag(name = "Radiation Map", description = "Endpoints para gestión de puntos de radiación")
 public class MapController {
 
