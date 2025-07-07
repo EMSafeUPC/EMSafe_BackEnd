@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/api/v1/profile", produces = MediaType.APPLICATION_JSON_VALUE)
-@CrossOrigin(origins = {"http://localhost:4200", "https://emsafe.netlify.app"})
+@CrossOrigin(origins = "*")
 @Tag(name = "Profile", description = "Profile management")
 @RequiredArgsConstructor
 public class ProfileController {
